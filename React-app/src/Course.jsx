@@ -1,11 +1,23 @@
-function Course(){
+// import image from './assets/html.png';
+
+const course1="HTML"
+
+function Course(props){
+
     return(
-        <div>
-            <img src="" alt="" />
-            <h3>HTML</h3>
-            <p>This is Code io's HTML course </p>
+        
+        <div className="card">
+            <img src={props.image} alt="" />
+            <h3>{props.name}</h3>
+            <p>{props.price}</p>
+            
         </div>
     );
+}
+
+Course.defaultProps = {
+    name:"code io course",
+    price:"$30"
 }
 
 export default Course
