@@ -4,10 +4,12 @@ import { useState } from 'react';
 function Course(props){
 
         const [purchased,setPurchased] = useState(false)
+        const [discount,setDiscount] = useState(props.price)
 
-        function BuyCourse(discout){
-            console.log(props.name,"purchased ",discout," discount appliyed")
+        function BuyCourse(amt){
+            console.log(props.name,"purchased ",amt," discount appliyed")
             setPurchased(true)
+            setDiscount(discount-amt)
             console.log(purchased)
         }
     
@@ -16,8 +18,9 @@ function Course(props){
         props.name && <div className="card">
             <img src={props.image} alt="" />
             <h3>{props.name}</h3>
-            <p>{props.price}</p>
+            <p>{discount}</p>
             <button onClick={(event)=>BuyCourse(20)}>BuyNow</button>
+            <button onClick={}>Delete</button>
             <p>{purchased ? "Done" : "Get it now"}</p>
             
         </div>
