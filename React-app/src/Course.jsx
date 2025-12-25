@@ -1,10 +1,14 @@
 import propTypes from 'prop-types'
+import { useState } from 'react';
 
 function Course(props){
 
-        function BuyCourse(discout,e){
+        const [purchased,setPurchased] = useState(false)
+
+        function BuyCourse(discout){
             console.log(props.name,"purchased ",discout," discount appliyed")
-            console.log(e)
+            setPurchased(true)
+            console.log(purchased)
         }
     
         return(
@@ -13,7 +17,8 @@ function Course(props){
             <img src={props.image} alt="" />
             <h3>{props.name}</h3>
             <p>{props.price}</p>
-            <button onClick={(event)=>BuyCourse(20,event)}>BuyNow</button>
+            <button onClick={(event)=>BuyCourse(20)}>BuyNow</button>
+            <p>{purchased ? "Done" : "Get it now"}</p>
             
         </div>
     );
