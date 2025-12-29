@@ -2,9 +2,10 @@ import Course from './Course';
 import image1 from './assets/html.png';
 import image2 from './assets/css.jpg';
 import image3 from './assets/js.png';
+import { useState } from 'react';
 
 function CourseList() {
-  const courses = [
+  const [courses,setCourses] = useState([
     { 
       id:1,
       name: "HTML Full Course", 
@@ -23,7 +24,7 @@ function CourseList() {
       image: image3 
     },
     
-  ];
+  ]);
 
 //sorting
 
