@@ -26,6 +26,11 @@ function CourseList() {
     
   ]);
 
+  function handleDelete(id){
+    const newCourses = courses.filter((courses)=>courses.id!=id)
+    setCourses(newCourses)
+  }
+
 //sorting
 
 courses.sort((x,y)=>y.price-x.price)
@@ -41,6 +46,8 @@ const vfmcourse = courses.filter((course)=>course.price>50)
       name={course.name}
       price={course.price}
       image={course.image}
+      delete = {handleDelete}
+      id={course.id}
     />);
 
   return(

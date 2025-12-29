@@ -20,7 +20,7 @@ function Course(props){
             <h3>{props.name}</h3>
             <p>{discount}</p>
             <button onClick={(event)=>BuyCourse(20)}>BuyNow</button>
-            <button onClick={}>Delete</button>
+            <button onClick={()=>props.delete(props.id)}>Delete</button>
             <p>{purchased ? "Done" : "Get it now"}</p>
             
         </div>
