@@ -1,0 +1,22 @@
+{
+    "corses":[
+        { 
+            "id":1,
+            "name": "HTML Full Course", 
+            "price": 49, 
+            "image": "./assets/html.png"
+
+        },
+        { 
+            "id":2,
+            "name": "CSS Full Course", 
+            "price": 59, 
+            "image": "./css.jpg" 
+        },
+        { 
+            "id":3,
+            "name": "JS Full Course", 
+            "price": 79, 
+            "image": "./assets/js.png" 
+            }
+]}

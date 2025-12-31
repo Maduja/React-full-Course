@@ -5,32 +5,20 @@ import image3 from './assets/js.png';
 import { useEffect, useState } from 'react';
 
 function CourseList() {
-  const [courses,setCourses] = useState([
-    { 
-      id:1,
-      name: "HTML Full Course", 
-      price: 49, 
-      image: image1
-
-    },
-    { id:2,
-      name: "CSS Full Course", 
-      price: 59, 
-      image: image2 
-    },
-    { id:3,
-      name: "JS Full Course", 
-      price: 79, 
-      image: image3 
-    },
-    
-  ]);
+  const [courses,setCourses] = useState(null);
 
   const [dummy,setDummy] = useState(true)
 
   useEffect(()=>{
-    console.log("use effect called")
-    console.log(dummy)
+    // console.log("use effect called")
+    // console.log(dummy)
+
+    fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(response=>{
+      console.log(response)
+      return response.json()
+    }).then(data=>{console.log(data)})
+
   })
 
   function handleDelete(id){
