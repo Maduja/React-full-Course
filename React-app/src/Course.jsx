@@ -1,5 +1,5 @@
 import propTypes from 'prop-types'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function Course(props){
 
@@ -12,6 +12,10 @@ function Course(props){
             setDiscount(discount-amt)
             console.log(purchased)
         }
+
+        // useEffect(()=>{
+        //     console,log('hello world')
+        // });
     
         return(
         
