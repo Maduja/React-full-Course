@@ -10,7 +10,7 @@ function CourseList() {
     // console.log("use effect called")
     // console.log(dummy)
 
-    fetch('http://localhost:3000/courses')
+    fetch('http://localhost:3001/courses')
     .then(response=>{
       console.log(response)
       return response.json()
@@ -28,7 +28,7 @@ function CourseList() {
 //courses.sort((x,y)=>y.price-x.price)
 
 //filtering 
-const vfmcourse = courses.filter((course)=>course.price>50)
+// const vfmcourse = courses.filter((course)=>course.price>50)
 
   //const coursesList = vfmcourse.map(
 

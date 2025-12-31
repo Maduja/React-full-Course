@@ -4,19 +4,19 @@
             "id":1,
             "name": "HTML Full Course", 
             "price": 49, 
-            "image": "./assets/html.png"
+            "image": "http://localhost:3001/html.png"
 
         },
         { 
             "id":2,
             "name": "CSS Full Course", 
             "price": 59, 
-            "image": "./css.jpg" 
+            "image": "http://localhost:3001/css.jpg" 
         },
         { 
             "id":3,
             "name": "JS Full Course", 
             "price": 79, 
-            "image": "./assets/js.png" 
+            "image": "http://localhost:3001/js.png" 
             }
 ]}
