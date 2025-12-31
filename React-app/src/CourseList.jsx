@@ -1,7 +1,4 @@
 import Course from './Course';
-import image1 from './assets/html.png';
-import image2 from './assets/css.jpg';
-import image3 from './assets/js.png';
 import { useEffect, useState } from 'react';
 
 function CourseList() {
@@ -13,13 +10,13 @@ function CourseList() {
     // console.log("use effect called")
     // console.log(dummy)
 
-    fetch('https://jsonplaceholder.typicode.com/posts')
+    fetch('http://localhost:3000/courses')
     .then(response=>{
       console.log(response)
       return response.json()
-    }).then(data=>{console.log(data)})
+    }).then(data=>setCourses(data))
 
-  })
+  },[])
 
   function handleDelete(id){
     const newCourses = courses.filter((courses)=>courses.id!=id)
@@ -28,12 +25,16 @@ function CourseList() {
 
 //sorting
 
-courses.sort((x,y)=>y.price-x.price)
+//courses.sort((x,y)=>y.price-x.price)
 
 //filtering 
 const vfmcourse = courses.filter((course)=>course.price>50)
 
   //const coursesList = vfmcourse.map(
+
+  if(!courses){
+    return <></>
+  }
   const coursesList = courses.map(
     (course)=> 
     <Course
@@ -59,3 +60,5 @@ export default CourseList;
 
 //map(course,index)
 //key = {index}
+
+//npx json-server --watch data/dummyData.json --port 3000 --static ./data
