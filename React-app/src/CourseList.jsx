@@ -2,7 +2,7 @@ import Course from './Course';
 import image1 from './assets/html.png';
 import image2 from './assets/css.jpg';
 import image3 from './assets/js.png';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function CourseList() {
   const [courses,setCourses] = useState([
@@ -25,6 +25,13 @@ function CourseList() {
     },
     
   ]);
+
+  const [dummy,setDummy] = useState(true)
+
+  useEffect(()=>{
+    console.log("use effect called")
+    console.log(dummy)
+  })
 
   function handleDelete(id){
     const newCourses = courses.filter((courses)=>courses.id!=id)
@@ -53,6 +60,7 @@ const vfmcourse = courses.filter((course)=>course.price>50)
   return(
     <>
     {coursesList}
+    <button onClick={()=>{setDummy(false)}}>Dummy Button</button>
     </>
   );
   
