@@ -14,6 +14,9 @@ function CourseList() {
 
     fetch('http://localhost:3001/courses')
     .then(response=>{
+      if(!response.ok){
+        throw Error("couldn't reterive data")
+      }
       console.log(response)
       return response.json()
     }).then(data=>setCourses(data))
