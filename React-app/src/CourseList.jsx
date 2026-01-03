@@ -1,31 +1,12 @@
 import Course from './Course';
-import { useEffect, useState } from 'react';
+import useFetch from './useFetch';
+
 
 function CourseList() {
-  const [courses,setCourses] = useState(null);
+  
+  const [courses, dummy, error] = useFetch('http://localhost:3001/courses')
 
-  const [dummy,setDummy] = useState(true)
-
-  const [error,setError] = useState(null)
-
-  useEffect(()=>{
-    // console.log("use effect called")
-    // console.log(dummy)
-    setTimeout(()=>{
-      fetch('http://localhost:3001/courses')
-      .then(response=>{
-        if(!response.ok){
-          throw Error("couldn't reterive data")
-        }
-        console.log(response)
-        return response.json()
-      }).then(data=>setCourses(data))
-      .catch((error)=>{
-        console.log(error.message)
-        setError(error.message)
-      })
-  })
-  },[])
+  
 
   function handleDelete(id){
     const newCourses = courses.filter((courses)=>courses.id!=id)
