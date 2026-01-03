@@ -39,7 +39,11 @@ function CourseList() {
   //const coursesList = vfmcourse.map(
 
   if(!courses){
-    return <></>
+    return (
+    <>
+      <p>{error}</p>
+    </>
+  )
   }
   const coursesList = courses.map(
     (course)=> 
