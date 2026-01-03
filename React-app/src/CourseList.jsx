@@ -11,20 +11,20 @@ function CourseList() {
   useEffect(()=>{
     // console.log("use effect called")
     // console.log(dummy)
-
-    fetch('http://localhost:3001/courses')
-    .then(response=>{
-      if(!response.ok){
-        throw Error("couldn't reterive data")
-      }
-      console.log(response)
-      return response.json()
-    }).then(data=>setCourses(data))
-    .catch((error)=>{
-      console.log(error.message)
-      setError(error.message)
-    })
-
+    setTimeout(()=>{
+      fetch('http://localhost:3001/courses')
+      .then(response=>{
+        if(!response.ok){
+          throw Error("couldn't reterive data")
+        }
+        console.log(response)
+        return response.json()
+      }).then(data=>setCourses(data))
+      .catch((error)=>{
+        console.log(error.message)
+        setError(error.message)
+      })
+  })
   },[])
 
   function handleDelete(id){
@@ -44,7 +44,8 @@ function CourseList() {
   if(!courses){
     return (
     <>
-      <p>{error}</p>
+      {!error && <p>Loading...</p>}
+      {error && <p>{error}</p>}
     </>
   )
   }
