@@ -44,7 +44,7 @@ function CourseList() {
   if(!courses){
     return (
     <>
-      {!error && <p>Loading...</p>}
+      {!error && <img src='data\200.gif'></img>}
       {error && <p>{error}</p>}
     </>
   )
