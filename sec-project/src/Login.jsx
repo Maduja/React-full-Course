@@ -1,4 +1,10 @@
+import { useState } from "react";
+
 function Login() {
+
+    const[pwd1, setPwd1] = useState("")
+    const[pwd2, setPwd2] = useState("")
+
   return (
     <>
       <form className = "my-5" style={{width:"50%",margin:"auto"}}>
