@@ -1,9 +1,9 @@
 function Login(){
     return(
         <>
-        <P>LogIn</P>
-        
+            <p>LogIn</p>
         </>
+        
     )
 }
 
