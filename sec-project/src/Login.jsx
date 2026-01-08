@@ -9,6 +9,10 @@ function Login() {
       setPwd1(event.target.value)
       console.log(event.target.value)
     }
+    function handlePwd2Change(event){
+      setPwd2(event.target.value)
+      console.log(event.target.value)
+    }
 
   return (
     <>
@@ -23,7 +27,7 @@ function Login() {
         </div>
         <div className="mb-3">
           <label className="form-label">Re-enter Password</label>
-          <input type="password" className="form-control" value={pwd2}/>
+          <input type="password" onChange={handlePwd2Change} className="form-control" value={pwd2}/>
         </div>
         <div className="mb-3 form-check">
           <input type="checkbox" className="form-check-input"/>
