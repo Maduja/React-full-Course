@@ -4,7 +4,7 @@ function Login() {
 
     const[pwd1, setPwd1] = useState("")
     const[pwd2, setPwd2] = useState("")
-    const[same,setSame] = useState("null")
+    const[same,setSame] = useState("")
 
     function handlePwd1Change(event){
       setPwd1(event.target.value)
