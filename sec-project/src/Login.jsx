@@ -14,11 +14,11 @@ function Login() {
         </div>
         <div className="mb-3">
           <label className="form-label">Password</label>
-          <input type="password" className="form-control"/>
+          <input type="password" className="form-control" value={pwd1}/>
         </div>
         <div className="mb-3">
           <label className="form-label">Re-enter Password</label>
-          <input type="password" className="form-control"/>
+          <input type="password" className="form-control" value={pwd2}/>
         </div>
         <div className="mb-3 form-check">
           <input type="checkbox" className="form-check-input"/>
