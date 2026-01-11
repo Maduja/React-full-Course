@@ -1,8 +1,12 @@
 import { useEffect } from "react"
-import { useState } from "react"
+import { useState,useContext } from "react"
 
-function Counter(props){
+import { dataContext } from "./Home"
+
+function Counter(){
     
+    const data = useContext(dataContext)
+
     const[count,setCount] = useState(0)
 
     function inc(){
@@ -16,7 +20,7 @@ function Counter(props){
     },[count])
     return(
         <>
-            <h2>{props.value}</h2>
+            <h2>{data}</h2>
             <h2>{count}</h2>
             <button onClick={inc}>Up</button>     
         </>

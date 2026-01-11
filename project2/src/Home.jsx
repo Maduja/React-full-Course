@@ -1,7 +1,7 @@
-import { useContext } from "react"
+import { createContext } from "react"
 import Login from "../../project2/src/Login"
 
-export const dataContext = useContext()
+export const dataContext = createContext()
 
 function Home(){
     const data = "datadata"
@@ -12,7 +12,9 @@ return(
         <p>Home Page</p>
 
         
-        <Login />
+        <dataContext.Provider value ={data}>
+            <Login/>
+        </dataContext.Provider>
     </>
 )
 }
