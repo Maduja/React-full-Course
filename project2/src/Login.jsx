@@ -1,11 +1,11 @@
 import Counter from "./Counter"
 
-function Login(props){
+function Login(){
 
-    const data = props.value
+    
     return(
         <>
-            <Counter value={data}/>
+            <Counter />
             <form>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
