@@ -4,6 +4,7 @@ import Home from './Home.jsx'
 import Login from './Login.jsx'
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
 import NotFound from './NotFound.jsx'
+import Counter from './Counter.jsx'
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path:'login',
     element:<Login />
+  },
+   {
+    path:'counter',
+    element:<Counter />
   }
 ])
 
