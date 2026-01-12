@@ -11,7 +11,7 @@ function Counter(){
 
     function inc(){
         setCount(preCount=> preCount +1)
-        setCount(preCount=> preCount +1)
+        //setCount(preCount=> preCount +1)
         //console.log(count)
     }
     
