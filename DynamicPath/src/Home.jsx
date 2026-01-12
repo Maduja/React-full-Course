@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
+import {Link,useNavigate} from "react-router-dom"
 
 function Home() {
+
+    const navigate = useNavigate()
+
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -20,6 +24,7 @@ function Home() {
         <div
           key={post.id}
           style={{ border: "1px solid #ccc", margin: "10px", padding: "10px" }}
+          onClick={()=>{navigate('/details')}}
         >
           <h3>{post.title}</h3>
           
