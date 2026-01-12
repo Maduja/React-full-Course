@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "LinkedIn",
+      "body": "This is the first post"
+    },
+    {
+      "id": 2,
+      "title": "Instagram",
+      "body": "This is the second post"
+    },
+    {
+      "id": 3,
+      "title": "WhatAPP",
+      "body": "This is the third post"
+    },
+    {
+      "id": 4,
+      "title": "FaceBook",
+      "body": "This is the fourth post"
+    }
+  ]
+}
