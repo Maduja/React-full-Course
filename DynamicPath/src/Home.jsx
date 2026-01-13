@@ -24,7 +24,7 @@ function Home() {
         <div
           key={post.id}
           style={{ border: "1px solid #ccc", margin: "10px", padding: "10px" }}
-          onClick={()=>{navigate('/details')}}
+          onClick={()=>{navigate('/details/'+post.id)}}
         >
           <h3>{post.title}</h3>
           

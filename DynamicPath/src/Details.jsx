@@ -1,3 +1,6 @@
+
+
+
 function Details(){
     return(
         <div>
